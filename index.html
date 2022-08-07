@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="loginBtn.css">
+  <title>Document</title>
+ </head>
+ <body>
+  <div class="login">
+    <a href="login.html" class="loginbtn">Login</a>
+  </div>
+  <div id="cards">
+
+</div>
+
+  <script src="addCard.js"></script>
+  <script>
+    let buyNow = async (productid)  => {
+       let res = await fetch('http://localhost:3000/buynow', {
+        method: 'POST',
+         headers: {
+           'Content-Type': 'application/json',
+         },
+           body: JSON.stringify(productid),
+       });
+       
+    }
+  </script>
+  
+</body>
+</html>
